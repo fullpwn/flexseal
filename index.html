@@ -18,7 +18,7 @@
             </style>            
     </head>
     <body>
-        <center><h1>THATS ALOTTA DAMAGE</h1></center>
+        <center><h1 id="damage">THATS ALOTTA DAMAGE</h1></center>
     </body>
     <br>
     <style>
@@ -30,6 +30,6 @@
 let searchParams = new URLSearchParams(window.location.search)
 searchParams.has('word') 
 let word = searchParams.get('word')
-console.log(name);
+document.getElementById("damage").innerHTML = ("THATS ALOTTA " + word) ;
     </script>
 </html>
