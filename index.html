@@ -27,21 +27,9 @@
         p   {font-family: "Comic Sans MS", "Comic Sans";}
     </style>
     <script>
-        function getParameter(p)
-{
-    var url = window.location.search.substring(1);
-    var varUrl = url.split('&');
-    for (var i = 0; i < varUrl.length; i++)
-    {
-        var parameter = varUrl[i].split('=');
-        if (parameter[0] == p)
-        {
-            return parameter[1];
-        }
-    }
-}
-
-​var name = getParameter('word');
-console.log(word);
+let searchParams = new URLSearchParams(window.location.search)
+searchParams.has('word') 
+let word = searchParams.get('word')
+console.log(name);
     </script>
 </html>
